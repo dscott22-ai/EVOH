@@ -465,4 +465,22 @@ button:focus-visible {
     border: 1px solid var(--border);
   }
 }
- 
+ /* Table styling */
+ .styled-table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    width: 100%;
+    }
+    .styled-table thead tr {
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    color: #f9f9f9;
+    text-align: left;
+    font-weight: bold;
+    }   
+    
