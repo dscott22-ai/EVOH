@@ -1,60 +1,43 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!--Character encoding for universal compatibility---->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Concepts</title>
-    <link rel="stylesheet" href="style.css"> <!--Link to external CSS file for styling by Kyante-->
-    </head>
-    <body>
+<meta charset="utf-8"/> <!--Character encoding for universal compatibility---->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Core Concepts</title>
+<link href="style.css" rel="stylesheet"/> <!--Link to external CSS file for styling by Kyante-->
+</head>
+<body><header><nav><ul class="main-menu"><li><a href="index.html">Home</a></li><li><a href="history.html">History</a></li><li><a href="future.html">Future</a></li><li><a aria-current="page" class="active" href="concepts.html">Concepts</a></li><li><a href="about.html">About</a></li><li><a href="resources.html">Resources</a></li><li><a href="quiz.html">Quiz</a></li></ul></nav></header>
 <!-- Navbar -->
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="history.html">History</a></li>
-      <li><a href="future.html">Future</a></li>
-      <li><a href="concepts.html" class="active">Concepts</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="resources.html">Resources</a></li>
-    </ul>
-  </nav>
 
-  <!-- Main Content -->
-  <main>
-    <section class="content">
-      <h2>Core Concepts</h2>
-
-      <h3>HTTP</h3>
-      <p>HTTP is the foundation of data communication on the World Wide Web. It defines how messages are formatted and transmitted between web browsers and servers. Since its creation in 1989 by Tim Berners-Lee, HTTP has evolved through multiple versions to improve speed, security, and reliability.</p>
-
-      <h3>Client</h3>
-      <p>HTTP operates on a request response model, where the client sends a request for a resource, and the server processes the request and sends back a response. This model enables the distributed nature of the web, where millions of clients communicate with servers worldwide.</p>
-
-      <h3>Server</h3>
-      <p>Each HTTP request is independent; the server doesnt retain any memory of previous interactions. While this makes HTTP simpler and scalable, it also led to the creation of cookies, sessions, and tokens to maintain user state.</p>
-
-      <h3>Request</h3>
-      <p>HTTP has gone through major updates to adapt to new web needs:</p>
-      <ul>
-        <li><strong>HTTP/0.9 (1991):</strong> Simple, one-line protocol for transferring raw data.</li>
-        <li><strong>HTTP/1.0 (1996):</strong> Added headers, status codes, and metadata.</li>
-        <li><strong>HTTP/1.1 (1997):</strong> Introduced persistent connections and caching.</li>
-        <li><strong>HTTP/2 (2015):</strong> Brought multiplexing, compression, and faster performance.</li>
-        <li><strong>HTTP/3 (2022):</strong> Uses QUIC protocol for reduced latency and improved security.</li>
-      </ul>
-      <p>Each version improves speed, efficiency, and security for modern web applications.</p>
-
-      <h3>Response</h3>
-      <p>HTTPS adds a layer of encryption using SSL/TLS to protect data as it travels between client and server. It prevents eavesdropping, data tampering, and man-in-the-middle attacks, making it the standard for all secure websites today.</p>
-
-      <h3>Protocol</h3>
-      <p>HTTP supports caching through headers like <code>Cache-Control</code> and <code>ETag</code>, which reduce the need to re-download resources. This improves load time and decreases bandwidth use, which is essential for faster, more efficient web browsing.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203</a>.</p>
-  </footer>
-
+<!-- Main Content -->
+<main>
+<section class="content">
+<h2>Core Concepts</h2>
+<h3>HTTP</h3>
+<p>HTTP is the foundation of data communication on the World Wide Web. It defines how messages are formatted and transmitted between web browsers and servers. Since its creation in 1989 by Tim Berners-Lee, HTTP has evolved through multiple versions to improve speed, security, and reliability.</p>
+<h3>Client</h3>
+<p>HTTP operates on a request response model, where the client sends a request for a resource, and the server processes the request and sends back a response. This model enables the distributed nature of the web, where millions of clients communicate with servers worldwide.</p>
+<h3>Server</h3>
+<p>Each HTTP request is independent; the server doesnt retain any memory of previous interactions. While this makes HTTP simpler and scalable, it also led to the creation of cookies, sessions, and tokens to maintain user state.</p>
+<h3>Request</h3>
+<p>HTTP has gone through major updates to adapt to new web needs:</p>
+<ul>
+<li><strong>HTTP/0.9 (1991):</strong> Simple, one-line protocol for transferring raw data.</li>
+<li><strong>HTTP/1.0 (1996):</strong> Added headers, status codes, and metadata.</li>
+<li><strong>HTTP/1.1 (1997):</strong> Introduced persistent connections and caching.</li>
+<li><strong>HTTP/2 (2015):</strong> Brought multiplexing, compression, and faster performance.</li>
+<li><strong>HTTP/3 (2022):</strong> Uses QUIC protocol for reduced latency and improved security.</li>
+</ul>
+<p>Each version improves speed, efficiency, and security for modern web applications.</p>
+<h3>Response</h3>
+<p>HTTPS adds a layer of encryption using SSL/TLS to protect data as it travels between client and server. It prevents eavesdropping, data tampering, and man-in-the-middle attacks, making it the standard for all secure websites today.</p>
+<h3>Protocol</h3>
+<p>HTTP supports caching through headers like <code>Cache-Control</code> and <code>ETag</code>, which reduce the need to re-download resources. This improves load time and decreases bandwidth use, which is essential for faster, more efficient web browsing.</p>
+</section>
+</main>
+<footer>
+<p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203</a>.</p>
+</footer>
 </body>
 </html>

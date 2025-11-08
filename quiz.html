@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quiz | HTTP Project</title>
+<link href="style.css" rel="stylesheet"/>
+<meta content="Self-assessment quiz on HTTP fundamentals, history, concepts, and its future." name="description"/>
+</head>
+<body><header><nav><ul class="main-menu"><li><a href="index.html">Home</a></li><li><a href="history.html">History</a></li><li><a href="future.html">Future</a></li><li><a href="concepts.html">Concepts</a></li><li><a href="about.html">About</a></li><li><a href="resources.html">Resources</a></li><li><a aria-current="page" class="active" href="quiz.html">Quiz</a></li></ul></nav></header>
+
+<main id="content">
+<section class="content">
+<h1>HTTP Knowledge Check</h1>
+<p>Test your understanding of HTTP based on the content in this site. You must answer all questions before submitting.</p>
+<form class="quiz-form" id="quizForm" onsubmit="event.preventDefault(); gradeQuiz();">
+<!-- Q1: Fill in the blank -->
+<div aria-labelledby="q1-label" class="question">
+<h2 id="q1-label">1) Wi‑Fi stands for <em>_____</em>.</h2>
+<input id="q1" name="q1" placeholder="Type your answer" required="" type="text"/>
+</div>
+
+<!-- Q2: Single choice -->
+<fieldset class="question">
+<legend>2) Which HTTP version introduced persistent connections by default?</legend>
+<label><input name="q2" required="" type="radio" value="A"/> A) HTTP/1.0</label>
+<label><input name="q2" type="radio" value="B"/> B) HTTP/1.1</label>
+<label><input name="q2" type="radio" value="C"/> C) HTTP/2</label>
+<label><input name="q2" type="radio" value="D"/> D) HTTP/3</label>
+</fieldset>
+
+<!-- Q3: Single choice -->
+<fieldset class="question">
+<legend>3) HTTP/2 primarily improves performance by:</legend>
+<label><input name="q3" required="" type="radio" value="A"/> A) Using UDP only</label>
+<label><input name="q3" type="radio" value="B"/> B) Multiplexing streams over one connection</label>
+<label><input name="q3" type="radio" value="C"/> C) Requiring new MIME types</label>
+<label><input name="q3" type="radio" value="D"/> D) Eliminating TLS</label>
+</fieldset>
+
+<!-- Q4: Single choice -->
+<fieldset class="question">
+<legend>4) HTTP/3 runs over which transport protocol by default?</legend>
+<label><input name="q4" required="" type="radio" value="A"/> A) QUIC</label>
+<label><input name="q4" type="radio" value="B"/> B) TCP</label>
+<label><input name="q4" type="radio" value="C"/> C) SCTP</label>
+<label><input name="q4" type="radio" value="D"/> D) ICMP</label>
+</fieldset>
+
+<!-- Q5: Multi-select -->
+<fieldset class="question">
+<legend>5) Select all valid HTTP methods.</legend>
+<label><input name="q5" type="checkbox" value="A"/> A) GET</label>
+<label><input name="q5" type="checkbox" value="B"/> B) POST</label>
+<label><input name="q5" type="checkbox" value="C"/> C) SEND</label>
+<label><input name="q5" type="checkbox" value="D"/> D) EXEC</label>
+</fieldset>
+<div class="actions">
+<button class="btn primary" type="submit">Submit</button>
+<button class="btn" onclick="resetQuiz()" type="button">Reset</button>
+</div>
+</form>
+<div aria-live="polite" class="results" id="results"></div>
+</section>
+</main>
+<footer>
+<p>This site is a student project for IT 3203 – <a href="https://ksuweb.github.io/IT3203/" rel="noopener" target="_blank">Class Website</a></p>
+</footer>
+
+<!-- Quiz logic -->
+<script src="Grade Quiz.js"></script>
+<script>
+    // Ensure at least one checkbox is selected for Q5 before submit (basic UX guard)
+    document.querySelector('form#quizForm').addEventListener('submit', function(e) {
+      const anyChecked = Array.from(document.querySelectorAll('input[name="q5"]:checked')).length > 0;
+      if (!anyChecked) {
+        e.preventDefault();
+        alert("Please select at least one option for Question 5.");
+      }
+    });
+  </script>
+</body>
+</html>
