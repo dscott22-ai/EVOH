@@ -493,3 +493,53 @@ nav .nav-menu li a { text-decoration: none; color: rgba(255,255,255,0.9); font-w
 nav .nav-menu li a::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); transition: left var(--transition-slow); }
 nav .nav-menu li a:hover::before { left: 100%; }
 nav .nav-menu li a:hover, nav .nav-menu li a.active { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: white; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+/* ===== Minimal navigation override ===== */
+header { padding-top: var(--space-md); }
+
+/* layout */
+nav .main-menu,
+nav .nav-menu {              /* cover both classes just in case */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;                 /* space between links */
+  padding: 0;
+  margin: 1rem 0;
+}
+
+/* links: plain text, no boxes */
+nav .main-menu li a,
+nav .nav-menu li a {
+  display: inline-block;
+  padding: 0.25rem 0;        /* vertical breathing room */
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: rgba(255,255,255,0.92);   /* or #111 if you’re on a light theme */
+  text-decoration: none;
+  transform: none !important;
+  position: static;          /* kill fancy ::before slide effects */
+}
+
+/* kill the hover “selection box” effect */
+nav .main-menu li a::before,
+nav .nav-menu li a::before { display: none !important; content: none !important; }
+
+/* subtle interaction (underline only) */
+nav .main-menu li a:hover,
+nav .nav-menu li a:hover,
+nav .main-menu li a:focus,
+nav .nav-menu li a:focus {
+  text-decoration: underline;
+  outline: none;             /* remove focus outline */
+}
+
+/* active page cue = bold + underline */
+nav .main-menu li a.active,
+nav .nav-menu li a.active,
+nav .main-menu li a[aria-current="page"],
+nav .nav-menu li a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+}
