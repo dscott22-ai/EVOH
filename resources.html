@@ -13,13 +13,82 @@
 <!-- Main Content -->
 <main>
 <section class="content">
-<h2>References &amp; Resources</h2>
+    <h1>References & Resources</h1>
+
+<h2 id="site-fixes">Plus Site Fixes We Implemented</h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">MDN Web Docs - HTTP</a></li>
 <li><a href="https://www.w3schools.com/">W3Schools - Web Development Tutorials</a></li>
 <li><a href="https://tools.ietf.org/html/rfc2616">RFC 2616 - HTTP/1.1 Specification</a></li>
 <li><a href="https://http3-explained.haxx.se/en/">HTTP/3 Explained</a></li>
 <li><a href="https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/">Cloudflare: What is HTTP?</a></li>
+<!-- Resources added for fixes + quiz (updated 2025-11-07) Dymone -->
+
+<ul>
+  <li><strong>Minimal navigation (remove heavy hover box):</strong>
+    Used basic flex list + underline on hover/active. See MDN on
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators" target="_blank" rel="noopener">CSS selectors & combinators</a>
+    and
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex" target="_blank" rel="noopener">flex layout</a>.
+  </li>
+  <li><strong>Radio/checkbox alignment:</strong>
+    Lined up inputs and labels with grid/flex. Reference:
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label" target="_blank" rel="noopener">&lt;label&gt; best practices</a> and
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox" target="_blank" rel="noopener">checkbox</a>/<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio" target="_blank" rel="noopener">radio</a> docs.
+  </li>
+  <li><strong>Viewport/meta for consistent mobile layout:</strong>
+    <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.
+    MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag" target="_blank" rel="noopener">Viewport meta tag</a>.
+  </li>
+  <li><strong>Cache-busting for CSS on GitHub Pages:</strong>
+    Appended <code>?v=5</code> to <code>style.css</code> link so new styles load. See
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#cache_busting" target="_blank" rel="noopener">HTTP cache busting</a>.
+  </li>
+  <li><strong>Fixed Resources 404 (case & path):</strong>
+    Used relative link <code>resources.html</code> (no leading slash) and renamed file to lowercase on a case-sensitive server:
+    <code>git mv Resources.html tmp &amp;&amp; git mv tmp resources.html</code>.
+    Git docs: <a href="https://git-scm.com/docs/git-mv" target="_blank" rel="noopener">git mv</a>.
+  </li>
+</ul>
+
+<h2 id="quiz-sources">Quiz: Sources & Accuracy</h2>
+<ul>
+  <li><strong>HTTP/1.1 persistent connections:</strong>
+    MDN HTTP/1.1 overview —
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP#http1.1" target="_blank" rel="noopener">Evolution of HTTP</a>.
+  </li>
+  <li><strong>HTTP/2 multiplexing:</strong>
+    MDN HTTP/2 —
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/2" target="_blank" rel="noopener">Overview & features</a>
+    and RFC 9113 —
+    <a href="https://www.rfc-editor.org/rfc/rfc9113" target="_blank" rel="noopener">HTTP/2</a>.
+  </li>
+  <li><strong>HTTP/3 over QUIC:</strong>
+    RFC 9114 —
+    <a href="https://www.rfc-editor.org/rfc/rfc9114" target="_blank" rel="noopener">HTTP/3</a>
+    and MDN —
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#http3" target="_blank" rel="noopener">HTTP/3 overview</a>.
+  </li>
+  <li><strong>Method set (GET/POST vs invalid names):</strong>
+    MDN Methods —
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank" rel="noopener">HTTP methods</a>.
+  </li>
+  <li><strong>Terminology note:</strong> Q1 “Wi-Fi = Wireless Fidelity” is a common backronym used in many texts, but
+    the Wi-Fi Alliance states it’s a brand name (not a strict acronym). Source:
+    <a href="https://www.wi-fi.org/who-we-are/faq" target="_blank" rel="noopener">Wi-Fi Alliance FAQ</a>.
+  </li>
+  <li><strong>Authorship:</strong> Quiz authored and reviewed by <em>Kyante Thompson</em> and <em>Dymone Scott</em>.</li>
+</ul>
+
+
+  <li><strong>VS Code Live Server for local preview:</strong>
+    <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noopener">Extension link</a>.
+  </li>
+  <li><strong>Hard refresh to bypass cache:</strong> Chrome/Edge: <kbd>Ctrl/⌘ + Shift + R</kbd>.</li>
+</ul>
+
+
+
 </ul>
 </section>
 </main>
